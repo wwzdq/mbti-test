@@ -1,0 +1,97 @@
+/* ========== 全局样式 ========== */
+body { font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif; background-color: #f8f9fa; color: #333; line-height: 1.6; overflow-x: hidden; }
+.section { display: none; padding-top: 20px; width: 100%; }
+.section.active { display: block; animation: fadeIn 0.5s ease-in-out; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.navbar { box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
+.card { border: none; margin-bottom: 15px; }
+.dimension-indicator .dimension-btn { padding: 8px 12px; cursor: default; border-radius: 5px; transition: all 0.3s; white-space: nowrap; display: inline-block; }
+.dimension-indicator .dimension-btn.active { background-color: #e7f1ff; border: 2px solid #0d6efd; }
+.question-container { background: white; border-radius: 15px; padding: 25px; width: 100%; overflow: hidden; }
+.question-title { font-size: 1.2rem; font-weight: 500; color: #333; white-space: normal; word-wrap: break-word; }
+.likert-scale { margin: 25px 0; width: 100%; }
+.likert-scale .btn-option { display: flex; align-items: center; width: 100%; padding: 12px 16px; margin-bottom: 10px; background-color: #f8f9fa; border: 2px solid transparent; border-radius: 12px; transition: all 0.2s; text-align: left; cursor: pointer; }
+.likert-scale .btn-option:hover { background-color: #e9ecef; transform: translateX(5px); border-color: #dee2e6; }
+.likert-scale .btn-option.selected { background-color: #e7f1ff; border-color: #0d6efd; }
+.likert-scale .btn-option.selected .option-circle { background-color: #0d6efd; color: white; border-color: #0d6efd; }
+.option-circle { width: 42px; height: 42px; border-radius: 50%; background-color: white; border: 2px solid #dee2e6; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; margin-right: 16px; flex-shrink: 0; transition: all 0.2s; }
+.likert-scale .btn-option small { font-size: 1.1rem; font-weight: 500; color: #333; line-height: 1.4; white-space: normal; word-break: break-word; }
+.navigation-buttons .btn { padding: 12px; font-weight: 600; }
+.result-type-box { display: inline-block; padding: 15px 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; color: white; box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4); text-align: center; }
+.type-image { width: 120px; height: 120px; object-fit: contain; margin: 0 auto 15px; display: none; border-radius: 10px; /* 改为圆角方形，去掉白色边框 */ }
+.type-code { font-size: 3rem; font-weight: bold; letter-spacing: 5px; }
+.type-name { font-size: 1.3rem; font-weight: 500; }
+.dual-bar-item { font-size: 0.9rem; }
+.dual-bar { display: flex; height: 28px; border-radius: 5px; overflow: hidden; background: #e9ecef; }
+.dual-bar-left { background: #3498db; color: white; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; }
+.dual-bar-right { background: #9b59b6; color: white; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; }
+.personality-card { border-radius: 8px; overflow: hidden; transition: all 0.3s; height: 100%; border: 1px solid #dee2e6; }
+.personality-card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); }
+.personality-header { padding: 12px; color: white; text-align: center; }
+.personality-code { font-size: 1.5rem; font-weight: bold; margin-bottom: 3px; }
+.personality-body { padding: 12px; background-color: white; }
+footer.bg-light { background-color: #f8f9fa !important; }
+.btn-primary { padding: 10px 25px; font-weight: 600; background-color: #0d6efd; border-color: #0d6efd; }
+.btn-primary:hover { background-color: #0b5ed7; border-color: #0a58ca; }
+.card { min-height: 160px; display: flex; flex-direction: column; }
+.card-body { flex-grow: 1; padding: 15px; }
+.progress-bar-animated { background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); background-size: 1rem 1rem; }
+.auto-jump-notice { font-size: 0.85rem; color: #6c757d; text-align: center; margin-top: 15px; padding: 8px; background-color: #f8f9fa; border-radius: 5px; border-left: 3px solid #0d6efd; }
+#testComplete { background: white; padding: 40px 20px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.05); }
+
+/* ========== 深度报告主题变量 ========== */
+:root { --theme-bg: #fdf8f4; --theme-card-bg: rgba(255, 255, 255, 0.75); --theme-text: #3a2c2c; --theme-accent: #b48c6c; --theme-border: rgba(180, 140, 108, 0.2); --theme-heading-font: 'Georgia', 'Times New Roman', serif; --theme-body-font: 'Segoe UI', 'Microsoft YaHei', sans-serif; --theme-card-radius: 24px; --theme-shadow: 0 8px 20px rgba(0, 0, 0, 0.03); --theme-quote-border: #d4b59d; }
+.theme-sharp { --theme-bg: #f8f9fa; --theme-card-bg: #ffffff; --theme-text: #111; --theme-accent: #ffc700; --theme-border: #000; --theme-heading-font: 'Inter', 'Segoe UI', sans-serif; --theme-body-font: 'Inter', 'Segoe UI', sans-serif; --theme-card-radius: 0px; --theme-shadow: 4px 4px 0 #000; --theme-quote-border: #ffc700; }
+.theme-analytical { --theme-bg: #f5f7fa; --theme-card-bg: #ffffff; --theme-text: #1e293b; --theme-accent: #2563eb; --theme-border: #e2e8f0; --theme-heading-font: 'SF Pro Display', 'Segoe UI', sans-serif; --theme-body-font: 'SF Pro Text', 'Segoe UI', sans-serif; --theme-card-radius: 8px; --theme-shadow: 0 1px 3px rgba(0,0,0,0.05); --theme-quote-border: #2563eb; }
+
+.report-deep-container { background: var(--theme-bg); color: var(--theme-text); font-family: var(--theme-body-font); padding: 20px 0; transition: background 0.3s, color 0.2s; }
+.report-card { background: var(--theme-card-bg); backdrop-filter: blur(4px); border-radius: var(--theme-card-radius); box-shadow: var(--theme-shadow); border: 1px solid var(--theme-border); padding: 28px 24px; margin-bottom: 24px; transition: all 0.2s; }
+.report-card h2, .report-card h3, .report-card h4 { font-family: var(--theme-heading-font); color: var(--theme-text); font-weight: 600; letter-spacing: -0.01em; }
+.report-card h3 { border-left: 4px solid var(--theme-accent); padding-left: 16px; margin-top: 0; margin-bottom: 20px; }
+.letter-content { font-size: 1.1rem; line-height: 1.8; white-space: pre-line; padding-left: 20px; border-left: 3px dashed var(--theme-accent); }
+
+/* 维度倾向性新样式：左右对比条 + 文字描述 */
+.dimension-bar { margin-bottom: 18px; }
+.dimension-bar .bar-header { display: flex; justify-content: space-between; margin-bottom: 4px; font-weight: 600; }
+.dimension-bar .bar-dual { display: flex; height: 24px; border-radius: 4px; overflow: hidden; background: #e9ecef; }
+.dimension-bar .bar-dual .left-fill { background: var(--theme-accent); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; transition: width 0.3s; }
+.dimension-bar .bar-dual .right-fill { background: rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; }
+.dimension-bar .bar-desc { font-size: 0.9rem; color: #666; margin-top: 6px; line-height: 1.4; }
+
+.cognitive-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 20px; }
+.func-card { background: rgba(0,0,0,0.02); padding: 16px; border-radius: 12px; border-left: 4px solid var(--theme-accent); }
+.func-name { font-weight: 700; font-size: 1.1rem; }
+.func-role { font-size: 0.9rem; opacity: 0.7; }
+.func-voice { font-style: italic; margin: 8px 0; color: var(--theme-accent); }
+.loop-warning { background: rgba(255,200,0,0.1); padding: 20px; border-radius: 12px; border: 1px solid var(--theme-accent); }
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .type-code { font-size: 2.2rem; }
+    .option-circle { width: 38px; height: 38px; font-size: 1rem; margin-right: 12px; }
+    .likert-scale .btn-option small { font-size: 1rem; }
+    .likert-scale .btn-option { padding: 10px 12px; }
+    .question-title { font-size: 1.1rem; }
+    .cognitive-grid { grid-template-columns: 1fr; }
+    .report-card { padding: 20px 16px; }
+    .type-image { width: 100px; height: 100px; }
+}
+/* 16型人格矩阵现代化卡片 */
+.personality-card-modern {
+    border-radius: 16px;
+    transition: all 0.25s ease;
+}
+.personality-card-modern:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 24px rgba(0, 0, 0, 0.08);
+}
+.type-thumb {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+.career-tags {
+    font-size: 0.75rem;
+    line-height: 1.8;
+}
